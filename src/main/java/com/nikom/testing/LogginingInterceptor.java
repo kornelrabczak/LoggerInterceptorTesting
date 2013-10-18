@@ -12,7 +12,7 @@ import javax.interceptor.InvocationContext;
  */
 public class LogginingInterceptor {
 
-    private static Logger logger = Logger.getLogger(LogginingInterceptor.class);
+    private static Logger logger = Logger.getLogger("test");
 
     @AroundInvoke
     public Object invoke(InvocationContext ctx) throws Exception {
@@ -20,7 +20,7 @@ public class LogginingInterceptor {
         boolean result = Boolean.parseBoolean(String.valueOf(ctx.getTarget()));
 
         if (result) {
-            logger.info("loguje ! " + something.getId());
+            logger.error("loguje ! " + something.getId());
         }
 
         return result;
