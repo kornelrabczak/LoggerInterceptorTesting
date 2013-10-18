@@ -8,7 +8,7 @@ import javax.interceptor.Interceptors;
 public class SomeRandomClazz {
 
     @Interceptors(LogginingInterceptor.class)
-    public boolean someRandomBooleanMethod() {
+    public boolean someRandomBooleanMethod(Something something) {
         return true;
     }
 
